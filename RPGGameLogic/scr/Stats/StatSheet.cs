@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 public class StatSheet
 {
+
     protected struct StatModifier
     {
         private readonly string id;
@@ -268,21 +269,23 @@ public class StatSheet
 
 
 
-    public void PrintBaseStats()
+    public List<KeyValuePair<string, double>> GetBaseStats()
     {
-//        Console.WriteLine("Base Stats for {0}:", name);
+        List<KeyValuePair<string, double>> stats = new List<KeyValuePair<string, double>>();
         foreach (KeyValuePair<string, double> pair in _baseStats)
         {
-            Console.WriteLine("{0}\t {1}", pair.Key, pair.Value);
+            stats.Add(pair);
         }
+        return stats;
     }
 
-    public void PrintStats()
+    public List<KeyValuePair<string, double>> GetStats()
     {
-//        Console.WriteLine("Modified Stats for {0}:", name);
+        List<KeyValuePair<string, double>> stats = new List<KeyValuePair<string, double>>();
         foreach (KeyValuePair<string, double> pair in _baseStats)
         {
-            Console.WriteLine("{0}\t {1}", pair.Key, GetStat(pair.Key));
+            stats.Add(new KeyValuePair<string, double>(pair.Key, GetStat(pair.Key)));
         }
+        return stats;
     }
 }

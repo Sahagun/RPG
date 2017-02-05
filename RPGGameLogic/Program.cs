@@ -27,23 +27,23 @@ namespace RPGGameLogic
 
             Test te = new Test();
 
-            te.print();
+            te.Print();
 
             te.AddStats();
 
-            te.print();
+            te.Print();
 
             te.AddModifier();
 
-            te.print();
+            te.Print();
 
             te.statSheet.RemoveModifiers("001");
-            te.print();
+            te.Print();
             te.statSheet.RemoveModifiers("002");
-            te.print();
+            te.Print();
             te.statSheet.RemoveModifiers("003");
 
-            te.print();
+            te.Print();
 
 //            te.statSheet.RemoveAllModifiers();
 
@@ -53,28 +53,14 @@ namespace RPGGameLogic
 
         }
 
-        static void AddStats(Creature c)
-        {
-            c.setBaseStat("strength", 100);
-            c.setBaseStat("agility", 50);
-        }
 
-        static void AddModifier(Creature c)
-        {
-            c.additiveStatsModifiers.Add(new Tuple<string, double>("strength", 100));
-            c.additiveStatsModifiers.Add(new Tuple<string, double>("intelligence", 25));
-
-            c.multiplicativeStatsModifiers.Add(new Tuple<string, double>("agility", 0.25f));
-            c.multiplicativeStatsModifiers.Add(new Tuple<string, double>("intelligence", 0));
-        }
-
-
-
-        class Test{
-            public StatSheet statSheet = new StatSheet();
-
+        class Test : Creature{
             public Test()
             {
+                name = "DOGG";
+
+                statSheet.RemoveAllModifiers();
+
                 statSheet.AddBaseStat("strength", 10);
                 statSheet.AddBaseStat("intelligence", 10);
                 statSheet.AddBaseStat("endurance", 10);
@@ -100,14 +86,10 @@ namespace RPGGameLogic
                 statSheet.AddMultiplicativeStatsModifier("003", "endurance", 100000);
             }
 
-            public void print()
+            public void Print()
             {
-                Console.WriteLine();
-                statSheet.PrintBaseStats();
-                Console.WriteLine();
-                statSheet.PrintStats();
-                Console.WriteLine();
-                Console.WriteLine();
+                PrintBaseStats();
+                PrintStats();
             }
 
         }
