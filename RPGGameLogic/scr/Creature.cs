@@ -7,12 +7,8 @@ public class Creature
 
     public string name { get; set; }
 
-    //    public Dictionary<string, double> baseStats = new Dictionary<string, double>();
-
-    //    public List<Tuple<string, double>> additiveStatsModifiers = new List<Tuple<string, double>>();
-    //    public List<Tuple<string, double>> multiplicativeStatsModifiers = new List<Tuple<string, double>>();
-
     public StatSheet statSheet = new StatSheet();
+    public EquipmentSystem equipment = new EquipmentSystem();
 
     public Creature()
     {

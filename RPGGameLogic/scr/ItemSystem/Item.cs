@@ -19,12 +19,12 @@ class Item
 }
 
 
-class Consumable : Item
+interface Consumable
 {
-
+    bool Consume();
 }
 
-class KeyItem : Item
+interface KeyItem
 {
 
 }

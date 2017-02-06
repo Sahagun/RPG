@@ -1,6 +1,1 @@
-c:\users\jonathan\documents\visual studio 2015\Projects\RPGGameLogic\RPGGameLogic\obj\Debug\RPGGameLogic.csprojResolveAssemblyReference.cache
-c:\users\jonathan\documents\visual studio 2015\Projects\RPGGameLogic\RPGGameLogic\bin\Debug\RPGGameLogic.exe.config
-c:\users\jonathan\documents\visual studio 2015\Projects\RPGGameLogic\RPGGameLogic\bin\Debug\RPGGameLogic.exe
-c:\users\jonathan\documents\visual studio 2015\Projects\RPGGameLogic\RPGGameLogic\bin\Debug\RPGGameLogic.pdb
-c:\users\jonathan\documents\visual studio 2015\Projects\RPGGameLogic\RPGGameLogic\obj\Debug\RPGGameLogic.exe
-c:\users\jonathan\documents\visual studio 2015\Projects\RPGGameLogic\RPGGameLogic\obj\Debug\RPGGameLogic.pdb
+C:\Users\Jonathan\Documents\Visual Studio 2015\Projects\RPGGameLogic\RPGGameLogic\bin\Debug\RPGGameLogic.exe.config

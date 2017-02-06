@@ -48,7 +48,7 @@
     <Compile Include="scr\Attack.cs" />
     <Compile Include="scr\Creature.cs" />
     <Compile Include="scr\IEffect.cs" />
-    <Compile Include="scr\Item.cs" />
+    <Compile Include="scr\ItemSystem\Item.cs" />
     <Compile Include="scr\Stats\StatSheet.cs" />
   </ItemGroup>
   <ItemGroup>
