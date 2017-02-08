@@ -2,42 +2,47 @@
 using System.Collections.Generic;
 
 
-public class Creature
+namespace RPGGameLogic
 {
 
-    public string name { get; set; }
-
-    public StatSheet statSheet = new StatSheet();
-    public EquipmentSystem equipment = new EquipmentSystem();
-
-    public Creature()
+    public class Creature
     {
-        /*
 
-statSheet.AddBaseStat("strength", 0);
-statSheet.AddBaseStat("intelligence", 0);
-statSheet.AddBaseStat("endurance", 0);
-statSheet.AddBaseStat("willpower", 0);
-statSheet.AddBaseStat("agility", 0);
-*/
-    }
+        public string name { get; set; }
 
+        public StatSheet statSheet = new StatSheet();
+        public EquipmentSystem equipment = new EquipmentSystem();
+        public Restriction restriction = new Restriction();
 
-    public void PrintBaseStats()
-    {
-        Console.WriteLine("Base Stats for {0}:", name);
-        foreach (KeyValuePair<string, double> pair in statSheet.GetStats())
+        public Creature()
         {
-            Console.WriteLine("{0}\t {1}", pair.Key, pair.Value);
+            /*
+
+    statSheet.AddBaseStat("strength", 0);
+    statSheet.AddBaseStat("intelligence", 0);
+    statSheet.AddBaseStat("endurance", 0);
+    statSheet.AddBaseStat("willpower", 0);
+    statSheet.AddBaseStat("agility", 0);
+    */
         }
-    }
 
-    public void PrintStats()
-    {
-        Console.WriteLine("Modified Stats for {0}:", name);
-        foreach (KeyValuePair<string, double> pair in statSheet.GetStats())
+
+        public void PrintBaseStats()
         {
-            Console.WriteLine("{0}\t {1}", pair.Key, pair.Value);
+            Console.WriteLine("Base Stats for {0}:", name);
+            foreach (KeyValuePair<string, double> pair in statSheet.GetStats())
+            {
+                Console.WriteLine("{0}\t {1}", pair.Key, pair.Value);
+            }
+        }
+
+        public void PrintStats()
+        {
+            Console.WriteLine("Modified Stats for {0}:", name);
+            foreach (KeyValuePair<string, double> pair in statSheet.GetStats())
+            {
+                Console.WriteLine("{0}\t {1}", pair.Key, pair.Value);
+            }
         }
     }
 }

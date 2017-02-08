@@ -45,10 +45,14 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="scr\Attack.cs" />
+    <Compile Include="scr\Battle\Attack.cs" />
     <Compile Include="scr\Creature.cs" />
+    <Compile Include="scr\EnumUtil.cs" />
+    <Compile Include="scr\EquipmentSystem.cs" />
     <Compile Include="scr\IEffect.cs" />
     <Compile Include="scr\ItemSystem\Item.cs" />
+    <Compile Include="scr\ItemSystem\Percing.cs" />
+    <Compile Include="scr\Restriction.cs" />
     <Compile Include="scr\Stats\StatSheet.cs" />
   </ItemGroup>
   <ItemGroup>
